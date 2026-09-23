@@ -192,6 +192,25 @@ export const translations = {
     waMsg1: 'Namaste Suresh ji! 🙏 Your agri-processing unit feasibility report is ready. PMEGP subsidy of ₹2.5L can be approved.',
     waMsg2: 'Yes, what documents are required?',
     waMsg3: 'You will need: ✅ Aadhaar Card ✅ Udyam Registration ✅ Bank Statement (6 months) ✅ Gram Panchayat NOC — I am sending the checklist PDF 📄',
+
+    // SWOT Analytics Page
+    swotTitle: 'AI-Powered SWOT Analysis & Visual Intelligence',
+    swotSub: 'Multi-dimensional quantitative synthesis evaluating local market telemetry, competitor geofencing, seasonal indexes, and MSME debt service benchmarks.',
+    viewFeasibilityReport: 'View Feasibility Report',
+    exportDossierPdf: 'Export Dossier PDF',
+    targetEnterprise: 'Target Enterprise',
+    availableMargin: 'Available Margin',
+    enterpriseStatus: 'Enterprise Status',
+    evaluationReadiness: 'Evaluation Readiness',
+    strategicPosture: 'Enterprise Strategic Posture & Factor Intensity',
+    districtBenchmark: 'District Benchmark',
+    yourScore: 'Your Score',
+    vulnerabilityIndex: 'Vulnerability Index',
+    bankableRating: 'Bankable Rating',
+    swotStrengths: 'STRENGTHS',
+    swotWeaknesses: 'WEAKNESSES',
+    swotOpportunities: 'OPPORTUNITIES',
+    swotThreats: 'THREATS',
   },
 
   hi: {
@@ -375,6 +394,25 @@ export const translations = {
     waMsg1: 'नमस्ते सुरेश जी! 🙏 आपकी कृषि-प्रसंस्करण इकाई की व्यवहार्यता रिपोर्ट तैयार है। PMEGP सब्सिडी ₹2.5 लाख स्वीकृत हो सकती है।',
     waMsg2: 'हाँ जी, कौन से दस्तावेज़ चाहिए?',
     waMsg3: 'आपको चाहिए: ✅ आधार कार्ड ✅ उद्यम पंजीकरण ✅ बैंक विवरण (6 माह) ✅ ग्राम पंचायत NOC — मैं चेकलिस्ट PDF भेज रहा हूँ 📄',
+
+    // SWOT Analytics Page
+    swotTitle: 'AI-संचालित SWOT विश्लेषण और विज़ुअल इंटेलिजेंस',
+    swotSub: 'स्थानीय बाज़ार टेलीमेट्री, प्रतिस्पर्धी जियोफ़ेंसिंग, मौसमी सूचकांक और MSME ऋण सेवा बेंचमार्क का बहुआयामी मात्रात्मक मूल्यांकन।',
+    viewFeasibilityReport: 'व्यवहार्यता रिपोर्ट देखें',
+    exportDossierPdf: 'डॉसियर PDF डाउनलोड करें',
+    targetEnterprise: 'लक्षित उद्यम',
+    availableMargin: 'उपलब्ध मार्जिन / पूंजी',
+    enterpriseStatus: 'उद्यम स्थिति',
+    evaluationReadiness: 'मूल्यांकन तत्परता',
+    strategicPosture: 'उद्यम रणनीतिक स्थिति एवं कारक तीव्रता',
+    districtBenchmark: 'ज़िला बेंचमार्क',
+    yourScore: 'आपका स्कोर',
+    vulnerabilityIndex: 'जोखिम / संवेदनशीलता सूचकांक',
+    bankableRating: 'बैंक ऋण रेटिंग',
+    swotStrengths: 'ताकतें (STRENGTHS)',
+    swotWeaknesses: 'कमजोरियां (WEAKNESSES)',
+    swotOpportunities: 'अवसर (OPPORTUNITIES)',
+    swotThreats: 'चुनौतियां / खतरे (THREATS)',
   },
 
   bn: {

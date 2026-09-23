@@ -55,10 +55,10 @@ export default function SwotAnalysis() {
               <span className="material-symbols-outlined text-[14px]">chevron_right</span>
               <Link to="/market-analysis" className="hover:text-primary cursor-pointer">{t('navMarket', 'Market Analysis')}</Link>
               <span className="material-symbols-outlined text-[14px]">chevron_right</span>
-              <span className="text-primary font-semibold">SWOT Analytics Dashboard</span>
+              <span className="text-primary font-semibold">{t('navSwot', 'SWOT Analytics')}</span>
             </div>
             <div className="flex items-center gap-space-sm flex-wrap">
-              <h1 className="font-headline-xl text-headline-xl text-primary tracking-tight">AI-Powered SWOT Analysis & Visual Intelligence</h1>
+              <h1 className="font-headline-xl text-headline-xl text-primary tracking-tight">{t('swotTitle', 'AI-Powered SWOT Analysis & Visual Intelligence')}</h1>
               <span className="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
                 <span className="material-symbols-outlined text-[14px]">verified</span>
                 RAG-Grounded
@@ -69,17 +69,17 @@ export default function SwotAnalysis() {
               </span>
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl">
-              Multi-dimensional quantitative synthesis evaluating local market telemetry, competitor geofencing, seasonal indexes, and MSME debt service benchmarks.
+              {t('swotSub', 'Multi-dimensional quantitative synthesis evaluating local market telemetry, competitor geofencing, seasonal indexes, and MSME debt service benchmarks.')}
             </p>
           </div>
           <div className="flex items-center gap-space-sm shrink-0">
             <button className="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm transition-all font-label-lg text-label-lg">
               <span className="material-symbols-outlined text-[18px] text-secondary">visibility</span>
-              <span>View Feasibility Report</span>
+              <span>{t('viewFeasibilityReport', 'View Feasibility Report')}</span>
             </button>
             <button className="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm transition-all font-label-lg text-label-lg">
               <span className="material-symbols-outlined text-[18px] text-primary">download</span>
-              <span>Export Dossier PDF</span>
+              <span>{t('exportDossierPdf', 'Export Dossier PDF')}</span>
             </button>
           </div>
         </div>
@@ -88,23 +88,23 @@ export default function SwotAnalysis() {
         <div className="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-space-md flex-1">
             <div className="flex flex-col">
-              <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Target Enterprise</span>
+              <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">{t('targetEnterprise', 'Target Enterprise')}</span>
               <div className="flex items-center gap-space-xs mt-0.5">
                 <span className="material-symbols-outlined text-primary text-[18px]">precision_manufacturing</span>
-                <span className="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Agri-Processing Unit</span>
+                <span className="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">{t('userTitle', 'Agri-Processing Unit')}</span>
               </div>
-              <span className="font-body-sm text-body-sm text-on-surface-variant">Bilaspur Block, Rampur (UP)</span>
+              <span className="font-body-sm text-body-sm text-on-surface-variant">{t('locationTag', 'Bilaspur Block, Rampur (UP)')}</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Available Margin</span>
+              <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">{t('availableMargin', 'Available Margin')}</span>
               <div className="flex items-center gap-space-xs mt-0.5">
                 <span className="material-symbols-outlined text-secondary text-[18px]">account_balance_wallet</span>
                 <span className="font-headline-sm text-headline-sm text-on-surface font-semibold">₹1,00,000</span>
               </div>
-              <span className="font-body-sm text-body-sm text-on-surface-variant">Self-Financing Equity (Liquid)</span>
+              <span className="font-body-sm text-body-sm text-on-surface-variant">{t('ownEquity', 'Self-Financing Equity (Liquid)')}</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Enterprise Status</span>
+              <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">{t('enterpriseStatus', 'Enterprise Status')}</span>
               <div className="flex items-center gap-space-xs mt-0.5">
                 <span className="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
                 <span className="font-headline-sm text-headline-sm text-on-surface font-semibold">Operating 1.5 Yrs</span>
@@ -112,7 +112,7 @@ export default function SwotAnalysis() {
               <span className="font-body-sm text-body-sm text-on-surface-variant">Udyam Registered</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Evaluation Readiness</span>
+              <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">{t('evaluationReadiness', 'Evaluation Readiness')}</span>
               <div className="flex items-center gap-space-xs mt-1">
                 <span className="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
@@ -135,13 +135,13 @@ export default function SwotAnalysis() {
               <div className="flex items-center gap-space-xs">
                 <span className="material-symbols-outlined text-secondary text-[24px]">radar</span>
                 <div>
-                  <h2 className="font-headline-md text-headline-md text-on-surface font-bold">Enterprise Strategic Posture & Factor Intensity</h2>
+                  <h2 className="font-headline-md text-headline-md text-on-surface font-bold">{t('strategicPosture', 'Enterprise Strategic Posture & Factor Intensity')}</h2>
                   <span className="font-body-sm text-body-sm text-on-surface-variant">Benchmarked against agri-processing enterprises in Rampur District</span>
                 </div>
               </div>
               <div className="flex items-center gap-space-sm shrink-0">
-                <span className="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface"><span className="w-3 h-3 rounded-sm bg-primary inline-block"></span> Your Score</span>
-                <span className="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant"><span className="w-3 h-3 rounded-sm bg-outline-variant/60 inline-block border border-dashed border-outline"></span> District Benchmark</span>
+                <span className="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface"><span className="w-3 h-3 rounded-sm bg-primary inline-block"></span> {t('yourScore', 'Your Score')}</span>
+                <span className="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant"><span className="w-3 h-3 rounded-sm bg-outline-variant/60 inline-block border border-dashed border-outline"></span> {t('districtBenchmark', 'District Benchmark')}</span>
               </div>
             </div>
 
@@ -205,7 +205,7 @@ export default function SwotAnalysis() {
               <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-space-sm">
                 {/* Gauge 1 */}
                 <div className="bg-surface-container-low p-space-md rounded-xl flex flex-col items-center text-center justify-between shadow-xs">
-                  <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Strategic Leverage</span>
+                  <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">{t('strategicLeverage', 'Strategic Leverage')}</span>
                   <div className="relative w-28 h-28 my-1 flex items-center justify-center">
                     <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
                       <circle cx="50" cy="50" fill="none" r="40" stroke="#dae2fd" strokeWidth="8" />
@@ -224,7 +224,7 @@ export default function SwotAnalysis() {
 
                 {/* Gauge 2 */}
                 <div className="bg-surface-container-low p-space-md rounded-xl flex flex-col items-center text-center justify-between shadow-xs">
-                  <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Vulnerability Index</span>
+                  <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">{t('vulnerabilityIndex', 'Vulnerability Index')}</span>
                   <div className="relative w-28 h-28 my-1 flex items-center justify-center">
                     <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
                       <circle cx="50" cy="50" fill="none" r="40" stroke="#dae2fd" strokeWidth="8" />
@@ -243,7 +243,7 @@ export default function SwotAnalysis() {
 
                 {/* Gauge 3 */}
                 <div className="bg-surface-container-low p-space-md rounded-xl flex flex-col items-center text-center justify-between shadow-xs">
-                  <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Bankable Rating</span>
+                  <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">{t('bankableRating', 'Bankable Rating')}</span>
                   <div className="my-2 flex flex-col items-center">
                     <div className="w-14 h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
                       <span className="material-symbols-outlined text-[28px]">account_balance</span>
@@ -286,7 +286,7 @@ export default function SwotAnalysis() {
             <div className="bg-primary px-space-md py-space-sm flex items-center justify-between text-on-primary">
               <div className="flex items-center gap-space-xs">
                 <span className="material-symbols-outlined text-[20px]">verified</span>
-                <h2 className="font-headline-sm text-headline-sm tracking-tight font-semibold">STRENGTHS</h2>
+                <h2 className="font-headline-sm text-headline-sm tracking-tight font-semibold">{t('swotStrengths', 'STRENGTHS')}</h2>
                 <span className="font-label-sm text-label-sm opacity-80">(Internal Capital & Capabilities)</span>
               </div>
               <span className="bg-on-primary/20 px-space-xs py-0.5 rounded text-[11px] font-label-sm font-semibold">4 Factors</span>
@@ -350,7 +350,7 @@ export default function SwotAnalysis() {
             <div className="bg-surface-container-highest px-space-md py-space-sm flex items-center justify-between text-on-surface">
               <div className="flex items-center gap-space-xs">
                 <span className="material-symbols-outlined text-on-surface-variant text-[20px]">warning</span>
-                <h2 className="font-headline-sm text-headline-sm tracking-tight font-semibold">WEAKNESSES</h2>
+                <h2 className="font-headline-sm text-headline-sm tracking-tight font-semibold">{t('swotWeaknesses', 'WEAKNESSES')}</h2>
                 <span className="font-label-sm text-label-sm text-on-surface-variant">(Internal Bottlenecks)</span>
               </div>
               <span className="bg-surface-container px-space-xs py-0.5 rounded text-[11px] font-label-sm font-semibold">4 Gaps</span>
@@ -429,7 +429,7 @@ export default function SwotAnalysis() {
             <div className="bg-secondary px-space-md py-space-sm flex items-center justify-between text-on-secondary">
               <div className="flex items-center gap-space-xs">
                 <span className="material-symbols-outlined text-[20px]">trending_up</span>
-                <h2 className="font-headline-sm text-headline-sm tracking-tight font-semibold">OPPORTUNITIES</h2>
+                <h2 className="font-headline-sm text-headline-sm tracking-tight font-semibold">{t('swotOpportunities', 'OPPORTUNITIES')}</h2>
                 <span className="font-label-sm text-label-sm opacity-80">(External Growth Vectors)</span>
               </div>
               <span className="bg-on-secondary/20 px-space-xs py-0.5 rounded text-[11px] font-label-sm font-semibold">5 Vectors</span>
@@ -461,7 +461,7 @@ export default function SwotAnalysis() {
             <div className="bg-error px-space-md py-space-sm flex items-center justify-between text-on-error">
               <div className="flex items-center gap-space-xs">
                 <span className="material-symbols-outlined text-[20px]">shield</span>
-                <h2 className="font-headline-sm text-headline-sm tracking-tight font-semibold">THREATS</h2>
+                <h2 className="font-headline-sm text-headline-sm tracking-tight font-semibold">{t('swotThreats', 'THREATS')}</h2>
                 <span className="font-label-sm text-label-sm opacity-80">(External Risk Factors)</span>
               </div>
               <span className="bg-on-error/20 px-space-xs py-0.5 rounded text-[11px] font-label-sm font-semibold">4 Risks</span>
