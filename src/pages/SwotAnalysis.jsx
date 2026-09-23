@@ -1,20 +1,23 @@
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function SwotAnalysis() {
+  const { t } = useLanguage()
+
   return (
     <div className="flex flex-col w-full">
       {/* Journey Tracker Rail */}
       <div className="w-full bg-surface-container-low px-space-lg py-space-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between overflow-x-auto text-xs font-label-sm py-1">
           {[
-            { num: '✓', label: '1. Discover', done: true, path: '/' },
-            { num: '✓', label: '2. Validate', done: true, path: '/swot-analysis' },
-            { num: '3', label: '3. Feasibility (Market)', done: false, activeLink: true, path: '/market-analysis' },
+            { num: '✓', label: t('stage1', '1. Discover'), done: true, path: '/' },
+            { num: '✓', label: t('stage2', '2. Validate'), done: true, path: '/swot-analysis' },
+            { num: '3', label: t('stage3', '3. Feasibility (Market)'), done: false, activeLink: true, path: '/market-analysis' },
             { num: '4', label: 'SWOT Analysis', active: true },
-            { num: '5', label: 'Financial Planner' },
+            { num: '5', label: t('stage4', 'Financial Planner') },
             { num: '6', label: 'Action Plan' },
-            { num: '7', label: 'Connect' },
-            { num: '8', label: 'Scale' },
+            { num: '7', label: t('stage6', 'Connect') },
+            { num: '8', label: t('stage7', 'Franchise / Scale') },
           ].map((step, i, arr) => (
             <div key={i} className="flex items-center gap-space-sm shrink-0">
               {i > 0 && <div className={`h-0.5 w-6 shrink-0 ${step.done || step.active ? (step.active ? 'bg-secondary' : 'bg-primary-container') : 'bg-surface-container-highest'}`}></div>}
@@ -48,9 +51,9 @@ export default function SwotAnalysis() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
           <div className="flex flex-col gap-space-xs">
             <div className="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
-              <Link to="/" className="hover:text-primary cursor-pointer">BizOrbit Dashboard</Link>
+              <Link to="/" className="hover:text-primary cursor-pointer">{t('brandName', 'BizOrbit')} {t('navDashboard', 'Dashboard')}</Link>
               <span className="material-symbols-outlined text-[14px]">chevron_right</span>
-              <Link to="/market-analysis" className="hover:text-primary cursor-pointer">Market Analysis</Link>
+              <Link to="/market-analysis" className="hover:text-primary cursor-pointer">{t('navMarket', 'Market Analysis')}</Link>
               <span className="material-symbols-outlined text-[14px]">chevron_right</span>
               <span className="text-primary font-semibold">SWOT Analytics Dashboard</span>
             </div>

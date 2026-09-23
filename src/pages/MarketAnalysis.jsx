@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function MarketAnalysis() {
+  const { t } = useLanguage()
+
   return (
     <div className="flex flex-col w-full">
       {/* Header Section */}
@@ -9,15 +12,15 @@ export default function MarketAnalysis() {
           <div className="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
             <Link to="/" className="hover:text-primary transition-colors uppercase tracking-wider flex items-center gap-1 font-semibold">
               <span className="material-symbols-outlined text-[16px]">arrow_back</span>
-              <span>Dashboard</span>
+              <span>{t('backToDashboard', 'Dashboard')}</span>
             </Link>
             <span>/</span>
-            <span className="text-on-surface font-semibold uppercase tracking-wider">Market Analysis & Feasibility</span>
+            <span className="text-on-surface font-semibold uppercase tracking-wider">{t('navMarket', 'Market Analysis')}</span>
           </div>
           <div className="flex items-center gap-space-sm">
             <Link to="/swot-analysis" className="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">
               <span className="material-symbols-outlined text-[14px]">troubleshoot</span>
-              <span>View SWOT Diagnostic</span>
+              <span>{t('viewSwot', 'View SWOT Diagnostic')}</span>
             </Link>
             <div className="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm shadow-sm">
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
@@ -28,19 +31,19 @@ export default function MarketAnalysis() {
         </div>
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pb-space-xs">
           <div>
-            <h1 className="font-headline-xl text-headline-xl text-primary tracking-tight">Hyper-Local Market Intelligence</h1>
+            <h1 className="font-headline-xl text-headline-xl text-primary tracking-tight">{t('marketIntelligence', 'Hyper-Local Market Intelligence')}</h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant mt-0.5">
-              Demand estimation, competitor density, supply chain mapping, and seasonal modeling for Bilaspur Block.
+              {t('marketSub', 'Demand estimation, competitor density, supply chain mapping, and seasonal modeling for Bilaspur Block.')}
             </p>
           </div>
           <div className="flex items-center gap-space-sm">
             <Link to="/" className="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-lowest text-on-surface rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-surface-container transition-all">
               <span className="material-symbols-outlined text-[18px]">dashboard</span>
-              <span>Back to Overview</span>
+              <span>{t('backToOverview', 'Back to Overview')}</span>
             </Link>
             <button className="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-primary text-on-primary rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all">
               <span className="material-symbols-outlined text-[18px]">download</span>
-              <span>Export Feasibility PDF</span>
+              <span>{t('exportPdf', 'Export Feasibility PDF')}</span>
             </button>
           </div>
         </div>

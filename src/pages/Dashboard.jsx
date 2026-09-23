@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Dashboard() {
+  const { t } = useLanguage()
+
   return (
     <div className="flex flex-col w-full">
       {/* Top Progress & Context */}
@@ -8,9 +11,9 @@ export default function Dashboard() {
         {/* Breadcrumb & Sync */}
         <div className="flex flex-wrap items-center justify-between gap-space-sm">
           <div className="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
-            <span className="hover:text-primary cursor-pointer uppercase tracking-wider">BizOrbit</span>
+            <span className="hover:text-primary cursor-pointer uppercase tracking-wider">{t('brandName', 'BizOrbit')}</span>
             <span>/</span>
-            <span className="text-on-surface font-semibold uppercase tracking-wider">Executive Overview</span>
+            <span className="text-on-surface font-semibold uppercase tracking-wider">{t('navDashboard', 'Dashboard')}</span>
           </div>
           <div className="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm shadow-sm">
             <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
@@ -22,19 +25,19 @@ export default function Dashboard() {
         {/* Executive Greeting */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pb-space-xs">
           <div>
-            <h1 className="font-headline-xl text-headline-xl text-primary tracking-tight">Good morning, Suresh</h1>
+            <h1 className="font-headline-xl text-headline-xl text-primary tracking-tight">{t('greeting', 'Good morning, Suresh')}</h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant mt-0.5">
-              Here is your hyper-local business health and regional growth overview for Bilaspur Block.
+              {t('dashboardSub', 'Here is your hyper-local business health and regional growth overview for Bilaspur Block.')}
             </p>
           </div>
           <div className="flex items-center gap-space-sm">
             <button className="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-lowest text-on-surface rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-surface-container transition-all">
               <span className="material-symbols-outlined text-[18px] text-secondary">tune</span>
-              <span>District Filters</span>
+              <span>{t('districtFilters', 'District Filters')}</span>
             </button>
             <button className="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-primary text-on-primary rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all">
               <span className="material-symbols-outlined text-[18px]">download</span>
-              <span>Export Monthly Dossier</span>
+              <span>{t('exportDossier', 'Export Monthly Dossier')}</span>
             </button>
           </div>
         </div>
@@ -42,14 +45,14 @@ export default function Dashboard() {
         {/* Enterprise Maturity Track */}
         <div className="p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
           <div className="flex items-center justify-between pb-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
-            <span>Enterprise Maturity Track</span>
-            <span className="font-semibold text-primary">Stage 03 of 07 • Feasibility & Planning</span>
+            <span>{t('maturityTrack', 'Enterprise Maturity Track')}</span>
+            <span className="font-semibold text-primary">{t('stageFeasibility', 'Stage 03 of 07 • Feasibility & Planning')}</span>
           </div>
           <div className="grid grid-cols-7 gap-space-xs items-center pt-space-xs">
             {[
-              { stage: '1. Discover', path: '/' },
-              { stage: '2. Validate (SWOT)', path: '/swot-analysis' },
-              { stage: '3. Feasibility (Market)', path: '/market-analysis' },
+              { stage: t('stage1', '1. Discover'), path: '/' },
+              { stage: t('stage2', '2. Validate (SWOT)'), path: '/swot-analysis' },
+              { stage: t('stage3', '3. Feasibility (Market)'), path: '/market-analysis' },
             ].map((item, i) => (
               <Link key={i} to={item.path} className={`flex flex-col gap-1.5 transition-transform hover:scale-105 ${i < 2 ? 'opacity-80' : ''}`} title={`Go to ${item.stage}`}>
                 <div className={`h-2${i === 2 ? '.5' : ''} rounded-full ${i === 2 ? 'bg-secondary shadow-sm relative flex items-center justify-end pr-1 ring-2 ring-secondary/30' : 'bg-primary-container flex items-center justify-end pr-0.5'}`}>
@@ -59,7 +62,7 @@ export default function Dashboard() {
                 <span className={`font-label-sm text-label-sm truncate ${i === 2 ? 'text-primary font-bold' : 'text-on-surface-variant'}`}>{item.stage}</span>
               </Link>
             ))}
-            {['4. Finance', '5. Start & Scale', '6. Connect', '7. Franchise'].map((stage, i) => (
+            {[t('stage4', '4. Finance'), t('stage5', '5. Start & Scale'), t('stage6', '6. Connect'), t('stage7', '7. Franchise')].map((stage, i) => (
               <div key={i + 3} className="flex flex-col gap-1.5 opacity-40">
                 <div className="h-2 rounded-full bg-surface-container-high"></div>
                 <span className="font-label-sm text-label-sm text-on-surface-variant truncate">{stage}</span>
@@ -76,7 +79,7 @@ export default function Dashboard() {
           <div className="relative z-10 flex flex-col xl:flex-row items-stretch gap-space-lg">
             {/* Circular Score */}
             <div className="xl:w-80 shrink-0 p-space-md bg-surface-container-low rounded-xl flex flex-col items-center justify-center text-center">
-              <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-space-xs font-semibold">Business Feasibility Score</span>
+              <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-space-xs font-semibold">{t('feasibilityScore', 'Business Feasibility Score')}</span>
               <div className="relative w-36 h-36 flex items-center justify-center my-space-xs">
                 <svg className="w-full h-full transform -rotate-90" viewBox="0 0 120 120">
                   <circle className="stroke-surface-container-high" cx="60" cy="60" fill="none" r="50" strokeWidth="10" />
@@ -84,29 +87,29 @@ export default function Dashboard() {
                 </svg>
                 <div className="absolute flex flex-col items-center">
                   <span className="font-display-lg text-display-lg text-primary leading-none">72</span>
-                  <span className="font-label-sm text-label-sm text-on-surface-variant mt-0.5">OUT OF 100</span>
+                  <span className="font-label-sm text-label-sm text-on-surface-variant mt-0.5">{t('outOf100', 'OUT OF 100')}</span>
                 </div>
               </div>
               <div className="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md mt-space-xs">
                 <span className="material-symbols-outlined text-[16px]">trending_up</span>
-                <span>Good Growth Foundation</span>
+                <span>{t('growthFoundation', 'Good Growth Foundation')}</span>
               </div>
-              <p className="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Top 15% percentile in Rampur Agri-Processing Cluster</p>
+              <p className="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">{t('percentileText', 'Top 15% percentile in Rampur Agri-Processing Cluster')}</p>
             </div>
 
             {/* Metric Bars */}
             <div className="flex-1 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between pb-space-sm">
-                  <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold">Component Readiness Diagnostic</h3>
-                  <span className="font-label-sm text-label-sm text-secondary uppercase font-semibold">NABARD & District MSME Benchmark</span>
+                  <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold">{t('componentDiagnostic', 'Component Readiness Diagnostic')}</h3>
+                  <span className="font-label-sm text-label-sm text-secondary uppercase font-semibold">{t('benchmarkTag', 'NABARD & District MSME Benchmark')}</span>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-space-lg gap-y-space-md pt-space-xs">
                   {[
-                    { label: 'Market Opportunity', value: 68, color: 'bg-secondary', note: '(Moderate)', link: '/market-analysis', linkText: 'View Market Gap →' },
-                    { label: 'Financial Readiness', value: 84, color: 'bg-primary-container', note: '(Strong)' },
-                    { label: 'Growth Potential', value: 79, color: 'bg-primary', note: '(High)' },
-                    { label: 'Operational Efficiency', value: 71, color: 'bg-tertiary', note: '(Stable)' },
+                    { label: t('marketOpp', 'Market Opportunity'), value: 68, color: 'bg-secondary', note: '(Moderate)', link: '/market-analysis', linkText: t('viewMarketGap', 'View Market Gap →') },
+                    { label: t('finReadiness', 'Financial Readiness'), value: 84, color: 'bg-primary-container', note: '(Strong)' },
+                    { label: t('growthPot', 'Growth Potential'), value: 79, color: 'bg-primary', note: '(High)' },
+                    { label: t('opsEff', 'Operational Efficiency'), value: 71, color: 'bg-tertiary', note: '(Stable)' },
                   ].map(metric => (
                     <div key={metric.label} className="flex flex-col gap-1">
                       <div className="flex justify-between items-center text-body-sm font-body-sm">
@@ -136,11 +139,11 @@ export default function Dashboard() {
                 <div className="flex items-center gap-space-sm">
                   <span className="material-symbols-outlined text-secondary text-[22px]">lightbulb</span>
                   <p className="font-body-md text-body-md text-on-surface">
-                    <span className="font-semibold text-primary">Strategic Leverage:</span> Adding a value-addition line (flour milling) can lift your feasibility score to <strong className="text-secondary">86/100</strong>.
+                    <span className="font-semibold text-primary">{t('strategicLeverage', 'Strategic Leverage:')}</span> {t('strategicDesc', 'Adding a value-addition line (flour milling) can lift your feasibility score to 86/100.')}
                   </p>
                 </div>
                 <Link to="/market-analysis" className="shrink-0 px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary transition-all font-label-md text-label-md shadow-sm inline-flex items-center gap-1 font-semibold">
-                  <span>Explore Action Path</span>
+                  <span>{t('exploreActionPath', 'Explore Action Path')}</span>
                   <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
                 </Link>
               </div>
@@ -152,16 +155,16 @@ export default function Dashboard() {
       {/* Quick Actions Hub */}
       <div className="px-space-lg pb-space-md">
         <div className="flex items-center justify-between mb-space-xs">
-          <h2 className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Executive Command Shortcuts</h2>
-          <span className="font-label-sm text-label-sm text-on-surface-variant">Click to open advisory module</span>
+          <h2 className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">{t('commandShortcuts', 'Executive Command Shortcuts')}</h2>
+          <span className="font-label-sm text-label-sm text-on-surface-variant">{t('clickToOpen', 'Click to open advisory module')}</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-sm">
           {[
-            { icon: 'query_stats', title: 'Market Analysis', desc: 'Demand gap & mandi prices', path: '/market-analysis', color: 'text-primary', hoverBg: 'group-hover:bg-primary group-hover:text-on-primary' },
-            { icon: 'troubleshoot', title: 'Analyze My Business', desc: 'SWOT & business diagnosis', path: '/swot-analysis', color: 'text-secondary', hoverBg: 'group-hover:bg-secondary group-hover:text-on-secondary' },
-            { icon: 'travel_explore', title: 'Find Opportunities', desc: 'Explore high-demand sectors', path: '/market-analysis', color: 'text-tertiary', hoverBg: 'group-hover:bg-tertiary group-hover:text-on-tertiary' },
-            { icon: 'calculate', title: 'Plan Expansion', desc: 'Model CapEx & feasibility', path: '/market-analysis', color: 'text-primary-container', hoverBg: 'group-hover:bg-primary-container group-hover:text-on-primary' },
-            { icon: 'handshake', title: 'Supply & Partners', desc: '3 verified B2B matches', path: '/market-analysis', color: 'text-secondary-container', hoverBg: 'group-hover:bg-secondary-container group-hover:text-on-secondary-container' },
+            { icon: 'query_stats', title: t('scMarket', 'Market Analysis'), desc: t('scMarketDesc', 'Demand gap & mandi prices'), path: '/market-analysis', color: 'text-primary', hoverBg: 'group-hover:bg-primary group-hover:text-on-primary' },
+            { icon: 'troubleshoot', title: t('scAnalyze', 'Analyze My Business'), desc: t('scAnalyzeDesc', 'SWOT & business diagnosis'), path: '/swot-analysis', color: 'text-secondary', hoverBg: 'group-hover:bg-secondary group-hover:text-on-secondary' },
+            { icon: 'travel_explore', title: t('scOpps', 'Find Opportunities'), desc: t('scOppsDesc', 'Explore high-demand sectors'), path: '/market-analysis', color: 'text-tertiary', hoverBg: 'group-hover:bg-tertiary group-hover:text-on-tertiary' },
+            { icon: 'calculate', title: t('scPlan', 'Plan Expansion'), desc: t('scPlanDesc', 'Model CapEx & feasibility'), path: '/market-analysis', color: 'text-primary-container', hoverBg: 'group-hover:bg-primary-container group-hover:text-on-primary' },
+            { icon: 'handshake', title: t('scPartners', 'Supply & Partners'), desc: t('scPartnersDesc', '3 verified B2B matches'), path: '/market-analysis', color: 'text-secondary-container', hoverBg: 'group-hover:bg-secondary-container group-hover:text-on-secondary-container' },
           ].map(card => (
             <Link key={card.title} to={card.path} className="group p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-pointer border border-transparent hover:border-primary/20">
               <div className="flex items-center justify-between mb-space-sm">
@@ -408,18 +411,18 @@ export default function Dashboard() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-space-xs">
                 <span className="material-symbols-outlined text-secondary text-[20px]">explore</span>
-                <h2 className="font-headline-md text-headline-md text-on-surface">Catchment Intelligence</h2>
+                <h2 className="font-headline-md text-headline-md text-on-surface">{t('catchmentTitle', 'Catchment Intelligence')}</h2>
               </div>
-              <span className="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold">Low Saturation</span>
+              <span className="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold">{t('lowSaturation', 'Low Saturation')}</span>
             </div>
             <div className="grid grid-cols-2 gap-space-sm">
               <div className="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
-                <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Catchment Population</span>
+                <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">{t('population', 'Catchment Population')}</span>
                 <span className="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">14,800 Citizens</span>
                 <span className="font-body-sm text-body-sm text-on-surface-variant">Across 14 Panchayats</span>
               </div>
               <div className="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
-                <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Captive Daily Demand</span>
+                <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">{t('captiveDemand', 'Captive Daily Demand')}</span>
                 <span className="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">800 kg / Day</span>
                 <span className="font-body-sm text-body-sm text-secondary font-semibold">~62% Unmet by organized units</span>
               </div>
@@ -440,17 +443,17 @@ export default function Dashboard() {
                 <div className="p-space-xs rounded-lg bg-surface-container-lowest/95 backdrop-blur-md shadow-sm flex items-center justify-around text-center">
                   <div>
                     <span className="block font-label-sm text-label-sm font-bold text-primary">1 Unit / 8km</span>
-                    <span className="block text-[10px] text-on-surface-variant font-label-sm">Competitor Density</span>
+                    <span className="block text-[10px] text-on-surface-variant font-label-sm">{t('competitorDensity', 'Competitor Density')}</span>
                   </div>
                   <div className="w-px h-6 bg-surface-container-high"></div>
                   <div>
                     <span className="block font-label-sm text-label-sm font-bold text-secondary">3 Collection Points</span>
-                    <span className="block text-[10px] text-on-surface-variant font-label-sm">In 5km Radius</span>
+                    <span className="block text-[10px] text-on-surface-variant font-label-sm">{t('collectionPoints', 'Collection Points')}</span>
                   </div>
                   <div className="w-px h-6 bg-surface-container-high"></div>
                   <div>
                     <span className="block font-label-sm text-label-sm font-bold text-tertiary">NH-87 Corridor</span>
-                    <span className="block text-[10px] text-on-surface-variant font-label-sm">Direct Mandi Access</span>
+                    <span className="block text-[10px] text-on-surface-variant font-label-sm">{t('mandiAccess', 'Direct Mandi Access')}</span>
                   </div>
                 </div>
               </div>
@@ -466,7 +469,7 @@ export default function Dashboard() {
               className="w-full py-space-sm px-space-md bg-primary text-on-primary rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all flex items-center justify-center gap-space-xs font-semibold"
             >
               <span className="material-symbols-outlined text-[18px]">query_stats</span>
-              <span>Open Detailed Market Analysis</span>
+              <span>{t('openDetailedMarket', 'Open Detailed Market Analysis')}</span>
               <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
             </Link>
           </div>
