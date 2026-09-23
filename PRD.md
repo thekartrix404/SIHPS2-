@@ -1,20 +1,20 @@
 # Product Requirements Document (PRD)
 
-## GraminMitra AI — Hyper-Local Business & Financial Structuring Assistant for Rural Micro-Entrepreneurs
+## BizOrbit — Hyper-Local Business & Financial Structuring Assistant for Rural Micro-Entrepreneurs
 
 | | |
 |---|---|
 | **Document Version** | 1.0 |
 | **Date** | September 23, 2026 |
-| **Status** | Draft for Review |
+| **Status** | Active |
 | **Owner** | Product Team |
-| **Product Codename** | GraminMitra AI *(placeholder — subject to branding)* |
+| **Product Brand** | BizOrbit (formerly GraminMitra AI) |
 
 ---
 
 ## 1. Executive Summary
 
-GraminMitra AI is a conversational AI assistant, delivered primarily over WhatsApp, that helps rural and semi-urban micro-entrepreneurs in India start, run, and grow small businesses. It combines a **Retrieval-Augmented Generation (RAG)** knowledge engine, a **hyper-local feasibility analysis engine**, and a **financial structuring module** to give entrepreneurs advice that is grounded in real scheme data, real local market conditions, and their own financial situation — in their own language, on a device they already use.
+BizOrbit is a conversational AI assistant, delivered primarily over WhatsApp and web dashboard, that helps rural and semi-urban micro-entrepreneurs in India start, run, and grow small businesses. It combines a **Retrieval-Augmented Generation (RAG)** knowledge engine, a **hyper-local feasibility analysis engine**, and a **financial structuring module** to give entrepreneurs advice that is grounded in real scheme data, real local market conditions, and their own financial situation — in their own language, on a device they already use.
 
 The product does not replace banks, NBFCs, or government agencies. It acts as a **trusted advisory and preparation layer** that increases the quality and success rate of applications entrepreneurs make to those institutions.
 

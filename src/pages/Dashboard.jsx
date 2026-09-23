@@ -8,7 +8,7 @@ export default function Dashboard() {
         {/* Breadcrumb & Sync */}
         <div className="flex flex-wrap items-center justify-between gap-space-sm">
           <div className="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
-            <span className="hover:text-primary cursor-pointer uppercase tracking-wider">GraminMitra AI</span>
+            <span className="hover:text-primary cursor-pointer uppercase tracking-wider">BizOrbit</span>
             <span>/</span>
             <span className="text-on-surface font-semibold uppercase tracking-wider">Executive Overview</span>
           </div>
@@ -383,7 +383,7 @@ export default function Dashboard() {
                       <span className="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold">12% Cost Reduction</span>
                     </div>
                     <p className="font-body-md text-body-md text-on-surface-variant mt-1">
-                      Located within 6.2 km. Group procurement through GraminMitra enables direct delivery of raw wheat with zero distributor markup.
+                      Located within 6.2 km. Group procurement through BizOrbit enables direct delivery of raw wheat with zero distributor markup.
                     </p>
                     <div className="flex items-center gap-space-md mt-space-xs text-on-surface-variant font-label-sm text-label-sm">
                       <span>Verified Entity: FPO-UP-0881</span>

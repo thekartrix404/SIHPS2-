@@ -22,7 +22,7 @@ export default function Sidebar() {
             <span className="material-symbols-outlined text-on-primary text-[18px]">agriculture</span>
           </div>
           <div className="flex flex-col">
-            <span className="font-headline-sm text-headline-sm text-primary leading-tight tracking-tight">GraminMitra AI</span>
+            <span className="font-headline-sm text-headline-sm text-primary leading-tight tracking-tight">BizOrbit</span>
             <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Hyper-Local Advisory</span>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function Sidebar() {
             <span className="material-symbols-outlined text-secondary text-[16px]">contact_emergency</span>
             <span className="font-label-md text-label-md text-on-surface">District Support Nodal</span>
           </div>
-          <span className="font-body-sm text-body-sm text-on-surface-variant">Helpline: 1800-GRAMIN-AI</span>
+          <span className="font-body-sm text-body-sm text-on-surface-variant">Helpline: 1800-BIZORBIT</span>
           <span className="font-label-sm text-label-sm text-primary">PMEGP & Mudra Desk Active</span>
         </div>
       </div>

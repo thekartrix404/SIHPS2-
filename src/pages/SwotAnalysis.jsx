@@ -48,7 +48,7 @@ export default function SwotAnalysis() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
           <div className="flex flex-col gap-space-xs">
             <div className="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
-              <Link to="/" className="hover:text-primary cursor-pointer">GraminMitra Dashboard</Link>
+              <Link to="/" className="hover:text-primary cursor-pointer">BizOrbit Dashboard</Link>
               <span className="material-symbols-outlined text-[14px]">chevron_right</span>
               <Link to="/market-analysis" className="hover:text-primary cursor-pointer">Market Analysis</Link>
               <span className="material-symbols-outlined text-[14px]">chevron_right</span>
@@ -414,7 +414,7 @@ export default function SwotAnalysis() {
                   <p className="font-body-md text-body-md text-on-surface">Missing electronic GST/Udyam trail weakens formal bank appraisal.</p>
                   <div className="flex items-center gap-space-xs text-primary bg-primary-fixed/30 px-space-sm py-1 rounded">
                     <span className="material-symbols-outlined text-[16px]">arrow_circle_right</span>
-                    <span className="font-label-md text-label-md font-semibold">Action: Onboard to GraminMitra billing engine.</span>
+                    <span className="font-label-md text-label-md font-semibold">Action: Onboard to BizOrbit billing engine.</span>
                   </div>
                 </div>
               </div>
