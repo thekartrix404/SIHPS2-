@@ -121,7 +121,7 @@ export default function MarketAnalysis() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-space-xs">
                 <span className="material-symbols-outlined text-secondary text-[20px]">query_stats</span>
-                <h2 className="font-headline-md text-headline-md text-on-surface">Local Demand Estimation</h2>
+                <h2 className="font-headline-md text-headline-md text-on-surface">{t('localDemandEst', 'Local Demand Estimation')}</h2>
               </div>
               <span className="font-label-sm text-label-sm text-on-surface-variant font-semibold">Census + Mandi Feed</span>
             </div>
@@ -177,7 +177,7 @@ export default function MarketAnalysis() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-space-xs">
                 <span className="material-symbols-outlined text-primary text-[20px]">currency_rupee</span>
-                <h2 className="font-headline-md text-headline-md text-on-surface">Mandi Price Intelligence</h2>
+                <h2 className="font-headline-md text-headline-md text-on-surface">{t('mandiPriceIntel', 'Mandi Price Intelligence')}</h2>
               </div>
               <span className="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-bold flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
@@ -234,7 +234,7 @@ export default function MarketAnalysis() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-space-xs">
                 <span className="material-symbols-outlined text-tertiary text-[20px]">calendar_month</span>
-                <h2 className="font-headline-md text-headline-md text-on-surface">Seasonal Demand Model</h2>
+                <h2 className="font-headline-md text-headline-md text-on-surface">{t('seasonalModel', 'Seasonal Demand Model')}</h2>
               </div>
               <span className="font-label-sm text-label-sm text-on-surface-variant font-semibold">12-Month Projection</span>
             </div>
@@ -301,9 +301,9 @@ export default function MarketAnalysis() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-space-xs">
                 <span className="material-symbols-outlined text-primary text-[20px]">location_on</span>
-                <h2 className="font-headline-md text-headline-md text-on-surface">Competitor Density Map</h2>
+                <h2 className="font-headline-md text-headline-md text-on-surface">{t('competitorDensityTitle', 'Competitor Density & Saturation')}</h2>
               </div>
-              <span className="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold">Low Saturation</span>
+              <span className="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold">{t('lowSaturation', 'Low Saturation')}</span>
             </div>
 
             {/* Map Visualization */}
@@ -380,7 +380,7 @@ export default function MarketAnalysis() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-space-xs">
                 <span className="material-symbols-outlined text-secondary text-[20px]">local_shipping</span>
-                <h2 className="font-headline-md text-headline-md text-on-surface">Supply Chain Assessment</h2>
+                <h2 className="font-headline-md text-headline-md text-on-surface">{t('supplyChainMapping', 'Supply Chain Assessment')}</h2>
               </div>
             </div>
             <div className="flex flex-col gap-space-sm">
@@ -418,7 +418,7 @@ export default function MarketAnalysis() {
           <div className="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-space-md">
             <div className="flex items-center gap-space-xs">
               <span className="material-symbols-outlined text-error text-[20px]">warning</span>
-              <h2 className="font-headline-md text-headline-md text-on-surface">Infrastructure Risk Flags</h2>
+              <h2 className="font-headline-md text-headline-md text-on-surface">{t('riskFlags', 'Infrastructure Risk Flags')}</h2>
             </div>
             <div className="flex flex-col gap-space-sm">
               {[
